@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/bank';
+const API_URL = 'https://bank-backend-r1m0.onrender.com/api/bank';
 
 const getAuthHeaders = () => {
     const token = localStorage.getItem('sefobank_token');
@@ -27,7 +27,6 @@ export const processTransfer = createAsyncThunk('bank/transfer', async (transfer
     }
 });
 
-// Köhnə importların çökməməsi üçün alias export:
 export const makeTransfer = processTransfer;
 
 export const processLoan = createAsyncThunk('bank/loan', async (loanData, thunkAPI) => {
