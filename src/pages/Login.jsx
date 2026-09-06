@@ -19,7 +19,7 @@ const Login = () => {
         setIsLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', {
+            const response = await axios.post('https://bank-backend-r1m0.onrender.com/api/auth/login', {
                 email: formData.username,
                 password: formData.password
             });
