@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+    --color-bankPrimary: #1C2E24;
+    --color-bankAccent: #D4AF37;
+    --color-bankLight: #F5F5F0;
+    --color-bankCard: #253C2F;
+}
+
+body {
+    background-color: #1C2E24;
+    color: #F5F5F0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
