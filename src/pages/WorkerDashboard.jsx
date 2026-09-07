@@ -27,7 +27,7 @@ const WorkerDashboard = () => {
     const fetchUsers = async () => {
         setIsLoading(true);
         try {
-            const res = await axios.get('http://localhost:5000/api/worker/customers', getAuthHeaders());
+            const res = await axios.get('https://bank-backend-r1m9.onrender.com/api/worker/customers', getAuthHeaders());
             setUsers(res.data);
         } catch (error) {
             console.error("İstifadəçiləri çəkərkən xəta:", error);
@@ -39,7 +39,7 @@ const WorkerDashboard = () => {
     const fetchLoans = async () => {
         setIsLoading(true);
         try {
-            const res = await axios.get('http://localhost:5000/api/worker/loans', getAuthHeaders());
+            const res = await axios.get('https://bank-backend-r1m9.onrender.com/api/worker/loans', getAuthHeaders());
             setLoans(res.data);
         } catch (error) {
             console.error("Kreditləri çəkərkən xəta:", error);
@@ -55,7 +55,7 @@ const WorkerDashboard = () => {
 
     const handleLoanAction = async (loanId, status) => {
         try {
-            await axios.post('http://localhost:5000/api/worker/loan-status', { loanId, status }, getAuthHeaders());
+            await axios.post('https://bank-backend-r1m9.onrender.com/api/worker/loan-status', { loanId, status }, getAuthHeaders());
             fetchLoans();
         } catch (error) {
             alert("Status yenilənərkən xəta baş verdi");
